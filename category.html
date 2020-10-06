@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>category</title>
+</head>
+
+<style>
+
+.site-footer {
+    background: #232F3A;
+    color: #faf9f5;
+    width: 100%;
+}
+    .category-group {
+        display: inline-block;
+        width: 100%;
+        padding: 1em 1em 2em;
+    }
+
+
+    .category-group__heading {
+        font-weight: bold;
+    }
+
+    .category-group__list {
+        list-style-type: none;
+    }
+
+    .category-group__list-item {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        list-style-type: none;
+    }
+
+    .categories-index {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+        -webkit-column-gap: 1em;
+        -moz-column-gap: 1em;
+        column-gap: 1em;
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .single-column-page {
+        max-width: 1260px;
+        margin: 0 auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 5em;
+    }
+
+    .site-header {
+        background: #ffffff;
+        height: 4.66667rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 50;
+    }
+
+    .site-header__loading-bar {
+        position: relative;
+        overflow: hidden;
+        height: 0.2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 60;
+    }
+
+    .site-header__loading-bar .youtube-preloader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 3px;
+        background: #27A9E1;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        pointer-events: none;
+    }
+
+    .site-header__inner {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center;
+        box-shadow: 0 0.06667rem 0.06667rem rgba(0, 0, 0, 0.2);
+        font-size: 1em;
+        height: 100%;
+    }
+
+    .site-header__logo-link {
+        font-family: "fira-sans", "San Francisco", "Segoe UI", sans-serif;
+        color: transparent;
+        text-decoration: none;
+        cursor: pointer;
+        background-image: none;
+        padding: .75rem 1rem;
+        text-indent: -1000em;
+    }
+
+    a {
+        font-family: "fira-sans", "San Francisco", "Segoe UI", sans-serif;
+        color: #27A9E1;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .site-header__logo {
+        display: block;
+        height: 3.33333em;
+        width: 7.73333em;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        align-self: center;
+        -ms-flex-item-align: center;
+    }
+
+    .site-header__public-menu {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center;
+        height: 100%;
+        margin-right: auto;
+    }
+</style>
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 bg-white text-dark bg-light">
+        <a class="btn btn-primary navbar-brand">Home Stars</a>
+        <button class="navbar-toggler" type="button">
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./category.html">Browse categories <span class="sr-only">(current)</span></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./feedbacks.html">Write a Review <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./join.html" >Join HomeStars<span class="sr-only" >(current)</span></a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for a category or a company"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <div class="ml-3">
+                <button onclick="window.location.href='./loginn.html';" type="button" class="btn btn-link" >
+                    log in
+                </button>
+
+                <button onclick="window.location.href='./signup.html';" type="button" class="btn btn-link">
+                    sign up
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <div class="mt-2 p-3 mb-2 bg-light text-dark">
+        <div>
+            <h1 style="text-align: center;" class="mt-3 mb-3">
+                Service Providers in Toronto, Ontario
+            </h1>
+        </div>
+
+
+
+        <div style="max-width: 1260px; margin: 0 auto;  padding-left: 1em; padding-right: 1em; padding-bottom: 5em;">
+            <div>
+                <p style="text-align: center;">
+                    Looking for a trusted company in Toronto for your next home improvement project? Choose from
+                    thousands of verified and reviewed home service pros that are eager to help.
+                </p>
+            </div>
+
+            <div class="categories-index">
+             
+    </div>
+    
+
+
+
+    <div class="categories-index">
+        <div class="category-group">
+            <div class="category-group__heading">Additions, Construction &amp; Renovations</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Basement Renovation companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/basement-renovation"><i
+                            class="icon-basement-renovation category-group__icon"></i>
+                        <span class="category-group__category-name">Basement Renovation</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Bathroom Renovation companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/bathroom-renovation"><i
+                            class="icon-bathroom-renovation category-group__icon"></i>
+                        <span class="category-group__category-name">Bathroom Renovation</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Condominium Renovations companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/condominium-renovations"><i
+                            class="icon-condominium-renovations category-group__icon"></i>
+                        <span class="category-group__category-name">Condominium Renovations</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Decks companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/patios-decks"><i class="icon-patios-decks category-group__icon"></i>
+                        <span class="category-group__category-name">Decks</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Demolition companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/demolition"><i class="icon-demolition category-group__icon"></i>
+                        <span class="category-group__category-name">Demolition</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Elevators, Lifts &amp; Ramps Installation &amp; Service companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/elevators-lifts-ramps"><i
+                            class="icon-elevators-lifts-ramps category-group__icon"></i>
+                        <span class="category-group__category-name">Elevators, Lifts &amp; Ramps Installation
+                            &amp; Service</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Historical Restoration companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/historical-restoration"><i
+                            class="icon-historical-restoration category-group__icon"></i>
+                        <span class="category-group__category-name">Historical Restoration</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Home Additions companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/home-additions"><i
+                            class="icon-home-additions category-group__icon"></i>
+                        <span class="category-group__category-name">Home Additions</span>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Architects, Builders &amp; Engineers</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Architects companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/architects"><i class="icon-architects category-group__icon"></i>
+                        <span class="category-group__category-name">Architects</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Builders companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/builders"><i class="icon-builders category-group__icon"></i>
+                        <span class="category-group__category-name">Builders</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Concrete Contractors companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/concrete-contractors"><i
+                            class="icon-concrete-contractors category-group__icon"></i>
+                        <span class="category-group__category-name">Concrete Contractors</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Design/Build companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/design-build"><i class="icon-design-build category-group__icon"></i>
+                        <span class="category-group__category-name">Design/Build</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Design/Project Management companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/design-project-management"><i
+                            class="icon-design-project-management category-group__icon"></i>
+                        <span class="category-group__category-name">Design/Project Management</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Drafting Service companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/drafting-service"><i
+                            class="icon-drafting-service category-group__icon"></i>
+                        <span class="category-group__category-name">Drafting Service</span>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Carpentry &amp; Woodworking</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Bathroom &amp; Kitchen - Fixtures &amp; Accessories companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/bathroom-kitchen-fixtures-accessories"><i
+                            class="icon-bathroom-kitchen-fixtures-accessories category-group__icon"></i>
+                        <span class="category-group__category-name">Bathroom &amp; Kitchen - Fixtures &amp;
+                            Accessories</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Cabinetry &amp; Millwork companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/cabinetry-millwork"><i
+                            class="icon-cabinetry-millwork category-group__icon"></i>
+                        <span class="category-group__category-name">Cabinetry &amp; Millwork</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Carpenters companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/carpenters"><i class="icon-carpenters category-group__icon"></i>
+                        <span class="category-group__category-name">Carpenters</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Closet &amp; Storage Solutions companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/closet-storage-solutions"><i
+                            class="icon-closet-storage-solutions category-group__icon"></i>
+                        <span class="category-group__category-name">Closet &amp; Storage Solutions</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Decks companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/patios-decks"><i class="icon-patios-decks category-group__icon"></i>
+                        <span class="category-group__category-name">Decks</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Elevators, Lifts &amp; Ramps Installation &amp; Service companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/elevators-lifts-ramps"><i
+                            class="icon-elevators-lifts-ramps category-group__icon"></i>
+                        <span class="category-group__category-name">Elevators, Lifts &amp; Ramps Installation
+                            &amp; Service</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Framing companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/framing"><i class="icon-framing category-group__icon"></i>
+                        <span class="category-group__category-name">Framing</span>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Cleaning Services</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Blinds Cleaning &amp; Repairing companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/blinds-cleaning-repairing"><i
+                            class="icon-blinds-cleaning-repairing category-group__icon"></i>
+                        <span class="category-group__category-name">Blinds Cleaning &amp; Repairing</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Carpet &amp; Rug Cleaning &amp; Repairing companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/carpet-rug-cleaning-repairing"><i
+                            class="icon-carpet-rug-cleaning-repairing category-group__icon"></i>
+                        <span class="category-group__category-name">Carpet &amp; Rug Cleaning &amp;
+                            Repairing</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Drapery &amp; Upholstery Cleaning companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/drapery-upholstery-cleaning"><i
+                            class="icon-drapery-upholstery-cleaning category-group__icon"></i>
+                        <span class="category-group__category-name">Drapery &amp; Upholstery Cleaning</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Duct Cleaning companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/duct-cleaning"><i class="icon-duct-cleaning category-group__icon"></i>
+                        <span class="category-group__category-name">Duct Cleaning</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Fire &amp; Water Damage Restoration companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/fire-water-damage-restoration"><i
+                            class="icon-fire-water-damage-restoration category-group__icon"></i>
+                        <span class="category-group__category-name">Fire &amp; Water Damage Restoration</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="House &amp; Apartment Cleaning companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/house-apartment-cleaning"><i
+                            class="icon-house-apartment-cleaning category-group__icon"></i>
+                        <span class="category-group__category-name">House &amp; Apartment Cleaning</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="House Cleaning Exteriors companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/house-cleaning-exteriors"><i
+                            class="icon-house-cleaning-exteriors category-group__icon"></i>
+                        <span class="category-group__category-name">House Cleaning Exteriors</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Junk Removal companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/junk-removal"><i class="icon-junk-removal category-group__icon"></i>
+                        <span class="category-group__category-name">Junk Removal</span>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Chimney Build &amp; Repair</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Chimney Build &amp; Repair companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/chimney-build-repair"><i
+                            class="icon-chimney-build-repair category-group__icon"></i>
+                        <span class="category-group__category-name">Chimney Build &amp; Repair</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Chimney Sweeps companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/chimney-sweeps"><i
+                            class="icon-chimney-sweeps category-group__icon"></i>
+                        <span class="category-group__category-name">Chimney Sweeps</span>
+                    </a></li>
+      
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Decorators &amp; Designers</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Art &amp; Print companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/art-galleries"><i class="icon-art-galleries category-group__icon"></i>
+                        <span class="category-group__category-name">Art &amp; Print</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Bathroom &amp; Kitchen - Fixtures &amp; Accessories companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/bathroom-kitchen-fixtures-accessories"><i
+                            class="icon-bathroom-kitchen-fixtures-accessories category-group__icon"></i>
+                        <span class="category-group__category-name">Bathroom &amp; Kitchen - Fixtures &amp;
+                            Accessories</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Game Rooms, Entertainment companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/game-rooms-entertainment"><i
+                            class="icon-game-rooms-entertainment category-group__icon"></i>
+                        <span class="category-group__category-name">Game Rooms, Entertainment</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Garage Design &amp; Organization companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/garage-design-organization"><i
+                            class="icon-garage-design-organization category-group__icon"></i>
+                        <span class="category-group__category-name">Garage Design &amp; Organization</span>
+                    </a></li>
+        
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Electrical, Computers &amp; Home Theater</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Alarm Systems companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/alarm-systems"><i class="icon-alarm-systems category-group__icon"></i>
+                        <span class="category-group__category-name">Alarm Systems</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Appliance Repair companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/appliance-repair"><i
+                            class="icon-appliance-repair category-group__icon"></i>
+                        <span class="category-group__category-name">Appliance Repair</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Appliance Retailers companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/appliance-retailers"><i
+                            class="icon-appliance-retailers category-group__icon"></i>
+                        <span class="category-group__category-name">Appliance Retailers</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Computer Repairs and Support companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/computer-repairs-service"><i
+                            class="icon-computer-repairs-service category-group__icon"></i>
+                        <span class="category-group__category-name">Computer Repairs and Support</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Electricians companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/electricians"><i class="icon-electricians category-group__icon"></i>
+                        <span class="category-group__category-name">Electricians</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Electronic Repairs companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/electronic-repairs"><i
+                            class="icon-electronic-repairs category-group__icon"></i>
+                        <span class="category-group__category-name">Electronic Repairs</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Home Automation companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/home-automation"><i
+                            class="icon-home-automation category-group__icon"></i>
+                        <span class="category-group__category-name">Home Automation</span>
+                    </a></li>
+      
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Flooring</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Carpet &amp; Rug Retailers companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/carpet-rug-retailers"><i
+                            class="icon-carpet-rug-retailers category-group__icon"></i>
+                        <span class="category-group__category-name">Carpet &amp; Rug Retailers</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Carpet Installers companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/carpet-installers"><i
+                            class="icon-carpet-installers category-group__icon"></i>
+                        <span class="category-group__category-name">Carpet Installers</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Concrete Contractors companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/concrete-contractors"><i
+                            class="icon-concrete-contractors category-group__icon"></i>
+                        <span class="category-group__category-name">Concrete Contractors</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Decorative Concrete companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/decorative-concrete"><i
+                            class="icon-decorative-concrete category-group__icon"></i>
+                        <span class="category-group__category-name">Decorative Concrete</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Floor Laying &amp; Refinishing companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/floor-laying-refinishing"><i
+                            class="icon-floor-laying-refinishing category-group__icon"></i>
+                        <span class="category-group__category-name">Floor Laying &amp; Refinishing</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Floor Retailers companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/floor-retailers"><i
+                            class="icon-floor-retailers category-group__icon"></i>
+                        <span class="category-group__category-name">Floor Retailers</span>
+                    </a></li>
+
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Foundations</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Excavation companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/excavation-demolition"><i
+                            class="icon-excavation-demolition category-group__icon"></i>
+                        <span class="category-group__category-name">Excavation</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Foundations companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/foundations"><i class="icon-foundations category-group__icon"></i>
+                        <span class="category-group__category-name">Foundations</span>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Furniture</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Art &amp; Print companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/art-galleries"><i class="icon-art-galleries category-group__icon"></i>
+                        <span class="category-group__category-name">Art &amp; Print</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Furniture companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/furniture"><i class="icon-furniture category-group__icon"></i>
+                        <span class="category-group__category-name">Furniture</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Furniture Designers &amp; Custom Builders companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/furniture-designers-custom-builders"><i
+                            class="icon-furniture-designers-custom-builders category-group__icon"></i>
+                        <span class="category-group__category-name">Furniture Designers &amp; Custom
+                            Builders</span>
+                    </a></li>
+
+
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Garage</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Closet &amp; Storage Solutions companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/closet-storage-solutions"><i
+                            class="icon-closet-storage-solutions category-group__icon"></i>
+                        <span class="category-group__category-name">Closet &amp; Storage Solutions</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Garage Design &amp; Organization companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/garage-design-organization"><i
+                            class="icon-garage-design-organization category-group__icon"></i>
+                        <span class="category-group__category-name">Garage Design &amp; Organization</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Garage Doors &amp; Hardware companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/garage-doors-hardware"><i
+                            class="icon-garage-doors-hardware category-group__icon"></i>
+                        <span class="category-group__category-name">Garage Doors &amp; Hardware</span>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="category-group">
+            <div class="category-group__heading">Green Home Improvement</div>
+            <ul class="category-group__list">
+                <li class="category-group__list-item">
+                    <a alt="Green Products &amp; Services companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/green-products-services"><i
+                            class="icon-green-products-services category-group__icon"></i>
+                        <span class="category-group__category-name">Green Products &amp; Services</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Renewable Energy companies and contractors in Toronto" class="category-group__link"
+                        href="/on/toronto/renewable-energy"><i
+                            class="icon-renewable-energy category-group__icon"></i>
+                        <span class="category-group__category-name">Renewable Energy</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Skylight Installation &amp; Repair companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/skylights"><i
+                            class="icon-skylights category-group__icon"></i>
+                        <span class="category-group__category-name">Skylight Installation &amp; Repair</span>
+                    </a></li>
+                <li class="category-group__list-item">
+                    <a alt="Sunrooms, Solariums &amp; Greenhouses companies and contractors in Toronto"
+                        class="category-group__link" href="/on/toronto/sunrooms-solariums-greenhouses"><i
+                            class="icon-sunrooms-solariums-greenhouses category-group__icon"></i>
+                        <span class="category-group__category-name">Sunrooms, Solariums &amp; Greenhouses</span>
+                    </a></li>
+
+            </ul>
+        </div>
+      
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+ 
+</body>
+
+</html>
